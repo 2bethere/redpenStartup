@@ -8,6 +8,9 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
+ wp_enqueue_script('jquery-ui-dialog');
+wp_enqueue_style("wp-jquery-ui-dialog");
+
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -27,6 +30,7 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
+
 	<?php wp_head(); ?>
 </head>
 

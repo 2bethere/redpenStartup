@@ -768,7 +768,7 @@ img.wp-smiley,
 	border-left: 1px solid #f2f2f2;
 	border-right: 1px solid #f2f2f2;
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 960px;
 	width: 100%;
 }
 
@@ -924,7 +924,7 @@ ul.nav-menu li:hover > ul,
 .navbar {
 	background-color: #f7f5e7;
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 960px;
 	width: 100%;
 }
 
@@ -976,6 +976,8 @@ ul.nav-menu li:hover > ul,
 	margin: 0 auto;
 	max-width: 604px;
 	width: 100%;
+	background-color: #FFFFFF;
+	padding: 4px 10px 4px 10px;
 }
 
 .sidebar .entry-header,
@@ -1002,7 +1004,7 @@ ul.nav-menu li:hover > ul,
 }
 
 .entry-header {
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
 .entry-title {

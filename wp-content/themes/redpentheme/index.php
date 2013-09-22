@@ -13,6 +13,11 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
+wp_enqueue_script('jquery-ui-core');
+wp_enqueue_script('jquery-ui-dialog');
+
+wp_enqueue_style('jquery-style-dialog'); 
+wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.css'); 
 
 get_header(); ?>
 
@@ -26,8 +31,7 @@ get_header(); ?>
 			<div id="homeintro">
 			Submit posts for editing
 			</div>
-			<textarea id="content fixed">
-			</textarea>
+			<textarea name="content" id="hometexteditor"></textarea>
 			<div id="homewordcount">wordcount</div>
 			<div id="homepublish">
 			    <span class="spinner"></span>
@@ -48,53 +52,63 @@ get_header(); ?>
 		    </ul>
 		    </div>
 		</div>
-		<?php
-if ( is_user_logged_in() ) {
-    echo 'Welcome, registered user!';
-} else {
-    echo 'Welcome, visitor!';
-}
-?>
-		<?php if ( have_posts() ) : ?>
+		<!-----------below is the tab area ---------->
+		<div id="homefeedtitle">Edit post from other members</div>
+		<div id="hometabcontainer">
+		    <div id="hometabtitle">
+			<div id="hometabrecent" class="hometabbutton">Recent</div>
+			<div id="hometabtrending" class="hometabbutton">Trending</div>
+			<div id="hometabyourfeed" class="hometabbutton">Your feed</div>
+		    </div>
+		    <div id="hometabcontent">
+		    	<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php
+				get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
+			<?php else : ?>
+			    <?php get_template_part( 'content', 'none' ); ?>
+			<?php endif; ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
 
-<div id="dialog-confirm" title="Empty the recycle bin?">
-  <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
-</div>
-		<!-- #scripts for home page -->
+		    </div>
+		</div>
+			<!-- #scripts for home page -->
 		<script>
 		<?php if ( !is_user_logged_in() ) : ?>
 		    $( "#homeeditform" ).submit(function( event ) {
 			  event.preventDefault();
-    $( "#dialog-confirm" ).dialog({
-      resizable: false,
-      height:140,
-      modal: true,
-      buttons: {
-        "Delete all items": function() {
-          $( this ).dialog( "close" );
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-  });    
-	    });
+			  $( "#dialog-confirm" ).dialog({
+			      resizable: false,
+			      dragable:false,
+			      modal: true,
+			      buttons: {
+				  "Delete all items": function() {
+				      $( this ).dialog( "close" );
+				      },
+				      Cancel: function() {
+					  $( this ).dialog( "close" );
+					  }
+					}
+			    });
+			    $(".ui-dialog-titlebar").hide();
+
+				alert(    $( "#dialog-confirm" ).dialog("option","height"));
+			  });
+
 		<?php endif; ?>
-		
 		</script>
 		</div><!-- #content -->
 	</div><!-- #primary -->
+<div id="dialog-confirm">
+<div id="dddd">
+  <p>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+  </div>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
