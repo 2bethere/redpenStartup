@@ -113,7 +113,7 @@ background-color: #D35B46;
 }
 #reviewbox
 {
-    height:600px;
+    overflow:auto;
     clear:right;
     background-color: #53787a;
 }
@@ -126,7 +126,6 @@ background-color: #D35B46;
 #reviewrightcol
 {
     width:50%;
-    height:600px;
     float:right;
     clear:right;
     overflow-y:scroll;
@@ -231,4 +230,5 @@ article
 #editorcomments
 {
     color: #FFFFFF;
+    margin-bottom: 80px;
 }
