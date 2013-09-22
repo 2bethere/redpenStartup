@@ -121,6 +121,7 @@ background-color: #D35B46;
 {
     width:50%;
     float:left;
+    overflow:auto;
 }
 #reviewrightcol
 {
