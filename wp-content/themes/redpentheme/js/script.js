@@ -1,14 +1,11 @@
 var colorIndex;
 
 var colorValues = [ 
-    "FF8888", "00FF00", "8080FF", "FFFF00", "FF00FF", "00FFFF", 
-    "807070", "008080", "808080", "808080", "800080", "008080", "808080", 
-    "C08080", "00C080", "8080C0", "C0C080", "C000C0", "00C0C0", "C0C0C0", 
-    "408080", "804080", "808040", "404080", "400040", "004040", "404040", 
-    "208080", "802080", "808020", "202080", "200020", "002020", "202020", 
-    "608080", "806080", "808060", "606080", "600060", "006060", "606060", 
-    "A08080", "80A080", "8080A0", "A0A080", "A000A0", "00A0A0", "A0A0A0", 
-    "E08080", "80E080", "8080E0", "E0E080", "E000E0", "00E0E0", "E0E0E0", 
+    "FF8080", "80FF80","8080FF",
+    "FFFF80", "FF80FF","80FFFF",
+    "FF6060", "60FF60","6060FF",
+    "FFFF60", "FF60FF","60FFFF"
+
     ];
 
 if (!window.GrabText) {
@@ -81,7 +78,7 @@ function replaceAt(s, n, t) {
 }
 
 $(document).ready(function () {
-    colorIndex = Math.floor(Math.random() * 20);
+    colorIndex = Math.floor(Math.random() * 12);
 
     $(document).bind("mouseup", GrabText.Selector.mouseup);
 /*
