@@ -1,3 +1,15 @@
+#respond
+{
+    display: none;
+}
+.selection_blob_div
+{
+    display: none;
+}
+#masthead
+{
+background-color: #D35B46;
+}
 #titlebanner{
     width:960px;
     height: 236px;

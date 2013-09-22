@@ -531,6 +531,8 @@ function add_meta_settings($comment_id) {
 	update_comment_meta($comment_id, 'start_position', $_POST['start_position'], true);
 	update_comment_meta($comment_id, 'end_position', $_POST['end_position'], true);
 	update_comment_meta($comment_id, 'selection_color', $_POST['selection_color'], true);
+
+	update_comment_meta($comment_id, 'selection_blob', $_POST['selection_blob'], true);
 }
 
 add_filter( 'comment_text', 'modify_comment');
@@ -546,11 +548,13 @@ function modify_comment( $text ){
 	    $selection_color = "#FFFFAA";
 	}
 
+	$selection_blob = get_comment_meta( get_comment_ID(), 'selection_blob', true ) ;
 	//
 	$start_text = "<div id=\"start_pos_".get_comment_ID()."\" title=\"".$start_position."\" />\n";
 	$end_text = "<div id=\"end_pos_".get_comment_ID()."\" title=\"".$end_position."\" />\n";
 	$color_text = "<div id=\"color_".get_comment_ID()."\" title=\"".$selection_color."\" />\n";
-		return $text.$start_text.$end_text.$color_text;
+	$selection_blob = "<div id=\"blob_".get_comment_ID()."\" class=\"selection_blob_div\">".$selection_blob."</div>\n";
+		return $text.$start_text.$end_text.$color_text.$selection_blob;
 	/*
 	if( $commenttitle = get_comment_meta( get_comment_ID(), 'start_position', true ) ) {
 		$text = $commenttitle ." Start:". $text;

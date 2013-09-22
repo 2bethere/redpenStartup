@@ -69,6 +69,8 @@ GrabText.Selector.mouseup = function () {
         $("#start_position").val(index.toString());
         $("#end_position").val(end.toString());
         $("#selection_color").val("#" + colorValues[colorIndex]);
+	$("#selection_blob").val($("div.entry-content")[0].innerHTML);
+	$("#respond").show();
     }
 }
 
@@ -78,7 +80,7 @@ function replaceAt(s, n, t) {
 
 $(document).ready(function () {
     $(document).bind("mouseup", GrabText.Selector.mouseup);
-
+/*
     $("article.comment-body").mouseover(function () {
         $(this).addClass('hover');
     });
@@ -86,12 +88,13 @@ $(document).ready(function () {
     $("article.comment-body").mouseout(function () {
         $(this).removeClass('hover');
     });
-
+*/
     $("article.comment-body").click(function () {
         var color = $(this).find("[id^=color]")[0].title;
         var start = parseInt($(this).find("[id^=start]")[0].title, 10);
         var end = parseInt($(this).find("[id^=end]")[0].title, 10);
-
+	var blob = $(this).find("[id^=blob]")[0].innerHTML;
+	
         var str = $("div.entry-content")[0].innerHTML;
         var substr = str.substring(start, end);
 
@@ -104,7 +107,8 @@ $(document).ready(function () {
         span.style.backgroundColor = color;
         span.style.color = "black";
 
-        $("div.entry-content")[0].innerHTML = replaceAt(str, start, span.outerHTML);
+        //$("div.entry-content")[0].innerHTML = replaceAt(str, start, span.outerHTML);
+	$("div.entry-content")[0].innerHTML = blob;
     });
 
     $("#goedit").click(function () {

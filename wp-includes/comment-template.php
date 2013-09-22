@@ -1665,9 +1665,11 @@ function comment_form( $args = array(), $post_id = null ) {
 							do_action( 'comment_form_after_fields' );
 							?>
 						<?php endif; ?>
-						<input type="text" name="start_position" id="start_position" value="" />
-						<input type="text" name="end_position" id="end_position" value="" />
-						<input type="text" name="selection_color" id="selection_color" value="" />
+						<input type="hidden" name="start_position" id="start_position" value="" />
+						<input type="hidden" name="end_position" id="end_position" value="" />
+						<input type="hidden" name="selection_color" id="selection_color" value="" />
+
+						<input type="hidden" name="selection_blob" id="selection_blob" value="" />
 						<?php echo apply_filters( 'comment_form_field_comment', $args['comment_field'] ); ?>
 						<?php //echo $args['comment_notes_after']; ?>
 						<p class="form-submit">
