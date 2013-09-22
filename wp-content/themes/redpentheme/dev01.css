@@ -1,27 +1,27 @@
 #titlebanner{
-    width:1600px;
-    height: 393px;
+    width:960px;
+    height: 236px;
     background-image:url('images/TitleBanner.png');
     background-color:#cccccc;
 }
 #homeeditor{
-    width:1600px;
-    height:400px;
+    width: 100%;
     padding: 10px 10px 10px 10px;
-    margin: 20px 0px 20px 0px;
+    margin: 10px 0px 10px 0px;
+    height: 350px;
 }
 
 #homeeditleft{
-    width:900px;
+    width:55%;
     float: left;
 }
 
 #homeeditright{
-    width:520px;
-    margin-top:50px;
-    float: left;
+    width:40%;
+    margin-top:30px;
+    float: right;
     clear: right;
-    font-size: 18pt;
+    font-size: 14pt;
     border-left-width:thick;
     border-left-style:solid;
     border-left-color:#d35b45;
@@ -29,9 +29,9 @@
     padding-top: 20px;
 }
 
-#hometexteditor.fixed{
+#hometexteditor{
+    width: 100%;
     resize: none;
-    width: 800px;
     height: 200px;
     clear: right;
     margin: 10px 0px 10px 0px;
@@ -41,8 +41,7 @@
 }
 #homeeditorarea
 {
-    width: 800px;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 #homewordcount
 {
@@ -56,4 +55,105 @@
 #homewordcount
 {
     color: #e5e6e7;
+}
+#dialog-confirm
+{
+    display: none;
+    position: absolute;
+}
+#dddd
+{
+    height: 300px;
+}
+#homefeedtitle
+{
+    font-size:24pt;
+    margin-left: 20px;
+}
+#hometabcontainer
+{
+    width:100%;
+}
+.hometabbutton
+{
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    width: 160px;
+    padding: 2px 2px 2px 2px;
+    float:left;
+}
+#hometabcontent
+{
+    clear:left;
+    width: 100%;
+    background-color:#53787a;
+    overflow: auto;
+}
+#hometabrecent
+{
+    background-color: #e3dfd2;
+    margin-left: 40px;
+    color:#d35b46;
+}
+#reviewbox
+{
+    height:600px;
+    clear:right;
+}
+#reviewleftcol
+{
+    width:50%;
+    float:left;
+}
+#reviewrightcol
+{
+    width:50%;
+    height:600px;
+    float:right;
+    clear:right;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    padding: 10px 10px 10px 10px;
+    
+}
+.comment-body:hover
+{
+    background-color: #FFFFAA;
+}
+#submit
+{
+}
+
+.entry-left
+{
+    width:20%;
+    float:left;
+    margin-left:60px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.entry-right
+{
+    width:70%;
+    float:right;
+    clear: right;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border:8px solid;
+    border-color: #bbbbbb;
+    border-radius:25px;
+    padding:10px 0px;
+}
+article
+{
+    overflow:auto;
+}
+#footerimage
+{
+    width:960px;
+    height: 65px;
+    background-image:url('images/FooterBanner.png');
+    background-color:#FFCCCC;
+    
 }

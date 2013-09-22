@@ -136,7 +136,7 @@ if ( 'attachment' == $post_type ) {
 }
 
 if ( current_theme_supports( 'post-formats' ) && post_type_supports( $post_type, 'post-formats' ) )
-	add_meta_box( 'formatdiv', _x( 'Format', 'post format' ), 'post_format_meta_box', null, 'side', 'core' );
+	//add_meta_box( 'formatdiv', _x( 'Format', 'post format' ), 'post_format_meta_box', null, 'side', 'low' );
 
 // all taxonomies
 foreach ( get_object_taxonomies( $post ) as $tax_name ) {
@@ -147,7 +147,7 @@ foreach ( get_object_taxonomies( $post ) as $tax_name ) {
 	$label = $taxonomy->labels->name;
 
 	if ( !is_taxonomy_hierarchical($tax_name) )
-		add_meta_box('tagsdiv-' . $tax_name, $label, 'post_tags_meta_box', null, 'side', 'core', array( 'taxonomy' => $tax_name ));
+		add_meta_box('tagsdiv-' . $tax_name, $label, 'post_tags_meta_box', null, 'side', 'low', array( 'taxonomy' => $tax_name ));
 	else
 		add_meta_box($tax_name . 'div', $label, 'post_categories_meta_box', null, 'side', 'core', array( 'taxonomy' => $tax_name ));
 }
