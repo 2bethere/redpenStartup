@@ -88,6 +88,7 @@
     clear:left;
     width: 100%;
     background-color:#53787a;
+    overflow: auto;
 }
 #hometabrecent
 {
@@ -122,4 +123,29 @@
 }
 #submit
 {
+}
+
+.entry-left
+{
+    width:20%;
+    float:left;
+    margin-left:60px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.entry-right
+{
+    width:70%;
+    float:right;
+    clear: right;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border:8px solid;
+    border-color: #bbbbbb;
+    border-radius:25px;
+    padding:10px 0px;
+}
+article
+{
+    overflow:auto;
 }

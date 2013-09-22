@@ -325,7 +325,7 @@ function twentythirteen_entry_meta() {
 
 	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
 		twentythirteen_entry_date();
-
+	/*
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
 	if ( $categories_list ) {
@@ -346,6 +346,7 @@ function twentythirteen_entry_meta() {
 			get_the_author()
 		);
 	}
+	*/
 }
 endif;
 

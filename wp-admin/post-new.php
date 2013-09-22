@@ -60,7 +60,7 @@ if ( is_multisite() ) {
 }
 
 // Show post form.
-var_dump($_REQUEST);
+//var_dump($_REQUEST);
 $post = get_default_post_to_edit( $post_type, true );
 $post_ID = $post->ID;
 include('edit-form-advanced.php');
