@@ -1,0 +1,59 @@
+#titlebanner{
+    width:1600px;
+    height: 393px;
+    background-image:url('images/TitleBanner.png');
+    background-color:#cccccc;
+}
+#homeeditor{
+    width:1600px;
+    height:400px;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 0px 20px 0px;
+}
+
+#homeeditleft{
+    width:900px;
+    float: left;
+}
+
+#homeeditright{
+    width:520px;
+    margin-top:50px;
+    float: left;
+    clear: right;
+    font-size: 18pt;
+    border-left-width:thick;
+    border-left-style:solid;
+    border-left-color:#d35b45;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#hometexteditor.fixed{
+    resize: none;
+    width: 800px;
+    height: 200px;
+    clear: right;
+    margin: 10px 0px 10px 0px;
+}
+#homeintro{
+    font-size:22pt;
+}
+#homeeditorarea
+{
+    width: 800px;
+    margin-left: 40px;
+}
+#homewordcount
+{
+    float:left;
+}
+#homepublish
+{
+    float:right;
+    clear:right;
+}
+#homewordcount
+{
+    color: #e5e6e7;
+}
