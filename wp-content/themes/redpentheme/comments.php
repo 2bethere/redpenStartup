@@ -18,6 +18,7 @@ if ( post_password_required() )
 ?>
 
 <div id="comments" class="comments-area">
+	<?php comment_form(); ?>
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -54,6 +55,5 @@ if ( post_password_required() )
 
 	<?php endif; // have_comments() ?>
 
-	<?php comment_form(); ?>
 
 </div><!-- #comments -->

@@ -524,3 +524,27 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+add_action ('comment_post', 'add_meta_settings', 1);
+function add_meta_settings($comment_id) {
+	update_comment_meta($comment_id, 'start_position', $_POST['start_position'], true);
+	update_comment_meta($comment_id, 'end_position', $_POST['end_position'], true);
+	update_comment_meta($comment_id, 'selection_color', $_POST['selection_color'], true);
+}
+
+add_filter( 'comment_text', 'modify_comment');
+function modify_comment( $text ){
+
+	$plugin_url_path = WP_PLUGIN_URL;
+
+	if( $commenttitle = get_comment_meta( get_comment_ID(), 'start_position', true ) ) {
+		$text = $commenttitle ." Start:". $text;
+	} 
+
+	if( $commentrating = get_comment_meta( get_comment_ID(), 'end_position', true ) ) {
+		$text = $text ." End:". $commentrating;
+		return $text;
+	} else {
+		return $text;
+	}
+}

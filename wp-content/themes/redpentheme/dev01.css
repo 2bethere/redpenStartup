@@ -95,3 +95,21 @@
     margin-left: 40px;
     color:#d35b46;
 }
+#reviewbox
+{
+    height:600px;
+}
+#reviewleftcol
+{
+    width:50%;
+    float:left;
+}
+#reviewrightcol
+{
+    width:50%;
+    float:right;
+    clear:right;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    
+}

@@ -1625,7 +1625,7 @@ function comment_form( $args = array(), $post_id = null ) {
 	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
 	$defaults = array(
 		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="4" aria-required="true"></textarea></p>',
 		'must_log_in'          => '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 		'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>',
@@ -1645,7 +1645,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		<?php if ( comments_open( $post_id ) ) : ?>
 			<?php do_action( 'comment_form_before' ); ?>
 			<div id="respond" class="comment-respond">
-				<h3 id="reply-title" class="comment-reply-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>
+			<!--	<h3 id="reply-title" class="comment-reply-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>-->
 				<?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
 					<?php echo $args['must_log_in']; ?>
 					<?php do_action( 'comment_form_must_log_in_after' ); ?>
@@ -1657,7 +1657,7 @@ function comment_form( $args = array(), $post_id = null ) {
 							<?php do_action( 'comment_form_logged_in_after', $commenter, $user_identity ); ?>
 						<?php else : ?>
 							<?php echo $args['comment_notes_before']; ?>
-							<?php
+														<?php
 							do_action( 'comment_form_before_fields' );
 							foreach ( (array) $args['fields'] as $name => $field ) {
 								echo apply_filters( "comment_form_field_{$name}", $field ) . "\n";
@@ -1665,6 +1665,9 @@ function comment_form( $args = array(), $post_id = null ) {
 							do_action( 'comment_form_after_fields' );
 							?>
 						<?php endif; ?>
+						<input type="text" name="start_position" value="" />
+						<input type="text" name="end_position" value="" />
+						<input type="text" name="selection_color" value="" />
 						<?php echo apply_filters( 'comment_form_field_comment', $args['comment_field'] ); ?>
 						<?php echo $args['comment_notes_after']; ?>
 						<p class="form-submit">
