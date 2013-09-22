@@ -1669,7 +1669,7 @@ function comment_form( $args = array(), $post_id = null ) {
 						<input type="text" name="end_position" id="end_position" value="" />
 						<input type="text" name="selection_color" id="selection_color" value="" />
 						<?php echo apply_filters( 'comment_form_field_comment', $args['comment_field'] ); ?>
-						<?php echo $args['comment_notes_after']; ?>
+						<?php //echo $args['comment_notes_after']; ?>
 						<p class="form-submit">
 							<input name="submit" type="submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" value="<?php echo esc_attr( $args['label_submit'] ); ?>" />
 							<?php comment_id_fields( $post_id ); ?>

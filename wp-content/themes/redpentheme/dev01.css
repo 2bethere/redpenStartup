@@ -113,5 +113,13 @@
     clear:right;
     overflow-y:scroll;
     overflow-x:hidden;
+    padding: 10px 10px 10px 10px;
     
+}
+.comment-body:hover
+{
+    background-color: #FFFFAA;
+}
+#submit
+{
 }
