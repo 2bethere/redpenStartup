@@ -17,7 +17,7 @@ wp_enqueue_script('jquery-ui-core');
 wp_enqueue_script('jquery-ui-dialog');
 
 wp_enqueue_style('jquery-style-dialog'); 
-wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.css'); 
+wp_enqueue_style('jquery-style-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.css'); 
 
 get_header(); ?>
 
@@ -81,23 +81,15 @@ get_header(); ?>
 		<script>
 		<?php if ( !is_user_logged_in() ) : ?>
 		    $( "#homeeditform" ).submit(function( event ) {
-			  event.preventDefault();
 			  $( "#dialog-confirm" ).dialog({
 			      resizable: false,
 			      dragable:false,
-			      modal: true,
-			      buttons: {
-				  "Delete all items": function() {
-				      $( this ).dialog( "close" );
-				      },
-				      Cancel: function() {
-					  $( this ).dialog( "close" );
-					  }
-					}
+			      modal: false
 			    });
-			    $(".ui-dialog-titlebar").hide();
-
-				alert(    $( "#dialog-confirm" ).dialog("option","height"));
+			    //$(".ui-dialog-titlebar").hide();
+			    //alert(    $( "#dialog-confirm" ).dialog("option","height"));
+			  event.preventDefault();
+			    
 			  });
 
 		<?php endif; ?>
@@ -105,9 +97,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 <div id="dialog-confirm">
-<div id="dddd">
-  <p>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
-  </div>
+You need to login to do that
 </div>
 
 <?php get_sidebar(); ?>
