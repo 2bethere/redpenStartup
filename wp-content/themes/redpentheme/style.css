@@ -139,6 +139,7 @@ a:hover {
 article.comment-body.hover 
 { 
     background-color:#ffffaa; 
+    border-color:#d35b46;
 }   
 
 h1,
