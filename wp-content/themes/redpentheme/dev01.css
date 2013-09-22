@@ -149,3 +149,11 @@ article
 {
     overflow:auto;
 }
+#footerimage
+{
+    width:960px;
+    height: 65px;
+    background-image:url('images/FooterBanner.png');
+    background-color:#FFCCCC;
+    
+}
