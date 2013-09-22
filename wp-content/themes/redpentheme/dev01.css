@@ -1,3 +1,6 @@
+#comments
+{
+}
 #respond
 {
     display: none;
@@ -25,18 +28,15 @@ background-color: #D35B46;
 
 #homeeditleft{
     width:55%;
-    float: left;
+    float: right;
+    clear:right;
 }
 
 #homeeditright{
     width:40%;
     margin-top:30px;
-    float: right;
-    clear: right;
+    float: left;
     font-size: 14pt;
-    border-left-width:thick;
-    border-left-style:solid;
-    border-left-color:#d35b45;
     padding-left: 20px;
     padding-top: 20px;
 }
@@ -47,6 +47,8 @@ background-color: #D35B46;
     height: 200px;
     clear: right;
     margin: 10px 0px 10px 0px;
+    border: 6px solid #EEEEEE;
+    border-raduis: 10px;
 }
 #homeintro{
     font-size:22pt;
@@ -113,6 +115,7 @@ background-color: #D35B46;
 {
     height:600px;
     clear:right;
+    background-color: #53787a;
 }
 #reviewleftcol
 {
@@ -169,4 +172,14 @@ article
     background-image:url('images/FooterBanner.png');
     background-color:#FFCCCC;
     
+}
+
+#reviewleftcol article
+{
+    background-color: #FFFFFF;
+    min-height: 400px;
+    overflow: auto;
+    margin: 20px 20px;
+    border: 10px solid #BBBBBB;
+    border-radius: 20px;
 }

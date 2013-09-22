@@ -44,14 +44,11 @@ get_header(); ?>
 			</div>
 		    </div>
 		    <div id="homeeditright">
-		    Why work with an expert 
-		    <ul>
-		    <li>Set deadlines and get your work edited faster</li>
-		    <li>Work with a highly rated editor</li>
-		    <li>No limit on document length</li>
-		    </ul>
+		    <img src="<?php echo get_template_directory_uri(); ?>/images/HomeBigPen.png" width="100%">
 		    </div>
 		</div>
+
+		    <img src="<?php echo get_template_directory_uri(); ?>/images/Example.png" width="960">
 		<!-----------below is the tab area ---------->
 		<div id="homefeedtitle">Edit post from other members</div>
 		<div id="hometabcontainer">

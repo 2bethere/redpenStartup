@@ -1113,7 +1113,6 @@ ul.nav-menu li:hover > ul,
 	hyphens:         auto;
 	word-wrap: break-word;
 }
-
 .entry-content a,
 .comment-content a {
 	color: #bc360a;
@@ -2138,8 +2137,12 @@ footer.entry-meta {
 }
 
 .comment-body {
-	padding: 12px 0;
+	padding: 12px 12px;
 	position: relative;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 10px solid #BBBBBB;
 }
 
 .comment-author {
