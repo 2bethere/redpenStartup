@@ -32,8 +32,12 @@ GrabText.Selector.getSelected = function () {
 
 GrabText.Selector.mouseup = function () {
     var selection = GrabText.Selector.getSelected();
-
     if (selection != '') {
+        if (selection.getRangeAt(0).startContainer.parentNode.parentNode != '')
+        {
+            if (selection.getRangeAt(0).startContainer.parentNode.parentNode.className != 'entry-content')
+                return;
+        }
         var str = selection.toString();
 
         var element = $("span.highlighted");
