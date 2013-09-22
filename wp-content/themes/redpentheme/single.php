@@ -29,6 +29,7 @@ get_header(); ?>
 			    </div>
 		</div>
 		<div id="reviewrightcol">
+		<h3 id="editorcomments">Editor comments:</h3>
 		        <?php comments_template(); ?>
 		</div>
 			<?php endwhile; ?>

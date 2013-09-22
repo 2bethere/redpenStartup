@@ -7,7 +7,19 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
+<div class="post_author_header">
+<div class="entry-left">
+<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+		<div class="entry-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div>
+		<?php endif; ?>
 
+</div>
+<div class="author_name">
+<?php the_author();?>
+</div>
+</div>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>

@@ -182,6 +182,7 @@ article
     margin: 20px 20px;
     border: 10px solid #BBBBBB;
     border-radius: 20px;
+    font-size: 16pt;
 }
 
 #upvote
@@ -209,4 +210,24 @@ article
     margin-left: 20px;
     float: left;
     clear: right;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.post_author_header
+{
+    overflow:auto;
+    padding: 20px 0px;
+    margin-bottom: -20px;
+}
+.author_name
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 60px;
+}
+#editorcomments
+{
+    color: #FFFFFF;
 }
