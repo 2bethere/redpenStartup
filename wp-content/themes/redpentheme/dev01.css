@@ -183,3 +183,30 @@ article
     border: 10px solid #BBBBBB;
     border-radius: 20px;
 }
+
+#upvote
+{
+    overflow: auto;
+}
+.upvote_button
+{
+    height: 24px;
+    width: 24px;
+    float: left;
+    background-image:url('images/Hands-Thumbs-up-icon.png');
+    background-repeat:no-repeat;
+    background-position:center; 
+}
+.upvote_button:hover
+{
+    background-color: #f37b66;
+    border-radius:4px;
+    cursor: pointer;
+}
+.upvote_count
+{
+    width: 40px;
+    margin-left: 20px;
+    float: left;
+    clear: right;
+}

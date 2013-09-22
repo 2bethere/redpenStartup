@@ -554,7 +554,14 @@ function modify_comment( $text ){
 	$end_text = "<div id=\"end_pos_".get_comment_ID()."\" title=\"".$end_position."\" />\n";
 	$color_text = "<div id=\"color_".get_comment_ID()."\" title=\"".$selection_color."\" />\n";
 	$selection_blob = "<div id=\"blob_".get_comment_ID()."\" class=\"selection_blob_div\">".$selection_blob."</div>\n";
-		return $text.$start_text.$end_text.$color_text.$selection_blob;
+	//
+	$random = rand(0,10);
+	$upvote_div = 
+	"<div id=\"upvote\">
+	    <div class=\"upvote_button\" title=\"".get_comment_ID()."\"></div>
+	    <div class=\"upvote_count\" id=\"upvote_count_id".get_comment_ID()."\">".$random."</div></div>";
+	//
+	return $text.$start_text.$end_text.$color_text.$selection_blob.$upvote_div;
 	/*
 	if( $commenttitle = get_comment_meta( get_comment_ID(), 'start_position', true ) ) {
 		$text = $commenttitle ." Start:". $text;

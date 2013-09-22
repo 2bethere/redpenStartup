@@ -56,6 +56,13 @@ if ( post_password_required() )
 		<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
+	<script>
+	$( ".upvote_button" ).click(function( event ) {
+	    var objname = "upvote_count_id"+event.target.title;
+	    var obj = eval(objname);
+	    obj.innerHTML = parseInt(obj.innerHTML)+1;
+	    });
+	</script>
 
 
 </div><!-- #comments -->
