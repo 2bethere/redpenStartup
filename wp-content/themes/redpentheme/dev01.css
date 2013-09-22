@@ -125,6 +125,7 @@ background-color: #D35B46;
 }
 #reviewrightcol
 {
+    max-height: 1000px;
     width:50%;
     float:right;
     clear:right;
