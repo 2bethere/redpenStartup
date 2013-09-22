@@ -32,6 +32,7 @@ wp_enqueue_style("wp-jquery-ui-dialog");
 	<![endif]-->
 
 	<?php wp_head(); ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

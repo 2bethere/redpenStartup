@@ -17,7 +17,16 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php twentythirteen_post_nav(); ?>
-				<?php comments_template(); ?>
+
+      <div>
+        <h2>Edit</h2>
+        <p class="edit"></p>
+        <textarea class="update"></textarea>
+        <input id="goedit" type="submit" value="Edit" />
+        <input id="godone" type="submit" value="Done" />
+      </div>
+
+      <?php comments_template(); ?>
 
 			<?php endwhile; ?>
 
