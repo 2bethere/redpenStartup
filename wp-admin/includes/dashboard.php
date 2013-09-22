@@ -280,7 +280,7 @@ function wp_dashboard_right_now() {
 
 	// Categories
 	$num = number_format_i18n( $num_cats );
-	$text = _n( 'Category', 'Categories', $num_cats );
+	$text = _n( 'Review need', 'Review needs', $num_cats );
 	if ( current_user_can( 'manage_categories' ) ) {
 		$num = "<a href='edit-tags.php?taxonomy=category'>$num</a>";
 		$text = "<a href='edit-tags.php?taxonomy=category'>$text</a>";

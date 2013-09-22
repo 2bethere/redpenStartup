@@ -3007,6 +3007,7 @@ ul.cat-checklist {
 #titlediv {
 	position: relative;
 	margin-bottom: 5px;
+	display:none;
 }
 
 #titlediv label {
