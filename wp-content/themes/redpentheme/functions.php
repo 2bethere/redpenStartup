@@ -537,6 +537,20 @@ function modify_comment( $text ){
 
 	$plugin_url_path = WP_PLUGIN_URL;
 
+	$start_position = get_comment_meta( get_comment_ID(), 'start_position', true );
+	$end_position = get_comment_meta( get_comment_ID(), 'end_position', true );
+	$selection_color = get_comment_meta( get_comment_ID(), 'selection_color', true ) ;
+	if(!$selection_color)
+	{
+	    $selection_color = "#FFFFAA";
+	}
+
+	//
+	$start_text = "<div id=\"start_pos_".get_comment_ID()."\" title=\"".$start_position."\" />\n";
+	$end_text = "<div id=\"end_pos_".get_comment_ID()."\" title=\"".$end_position."\" />\n";
+	$color_text = "<div id=\"color_".get_comment_ID()."\" title=\"".$selection_color."\" />\n";
+		return $text.$start_text.$end_text.$color_text;
+	/*
 	if( $commenttitle = get_comment_meta( get_comment_ID(), 'start_position', true ) ) {
 		$text = $commenttitle ." Start:". $text;
 	} 
@@ -546,5 +560,5 @@ function modify_comment( $text ){
 		return $text;
 	} else {
 		return $text;
-	}
+	}*/
 }

@@ -98,6 +98,7 @@
 #reviewbox
 {
     height:600px;
+    clear:right;
 }
 #reviewleftcol
 {
@@ -107,6 +108,7 @@
 #reviewrightcol
 {
     width:50%;
+    height:600px;
     float:right;
     clear:right;
     overflow-y:scroll;
