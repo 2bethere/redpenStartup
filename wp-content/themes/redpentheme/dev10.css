@@ -14,7 +14,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url("dev01.css");
-@import url("dev10.css");
 
 /**
  * Table of Contents:
@@ -803,6 +802,7 @@ img.wp-smiley,
 
 .site-header {
 	position: relative;
+	background-color: #d35b46;
 }
 
 .site-header .home-link {
@@ -832,6 +832,8 @@ img.wp-smiley,
 	font: 300 italic 24px "Source Sans Pro", Helvetica, sans-serif;
 	margin: 0;
 }
+
+
 
 
 /**
@@ -959,6 +961,24 @@ ul.nav-menu li:hover > ul,
 	outline: 0;
 	width: 230px;
 }
+
+.red-pen{
+	margin-left:50px;
+}
+
+.banner-position {
+	position:absolute;
+	right:0px;
+}
+
+.articles{
+	position:relative;
+	display:inline-block;
+	right:596px;
+	width: 140px;
+	height: 100px;
+}
+
 
 
 /**

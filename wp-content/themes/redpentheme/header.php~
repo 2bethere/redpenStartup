@@ -41,6 +41,7 @@
 
 <img class="red-pen" src="<?php echo get_template_directory_uri(); ?>/images/redpen.png">
 </a>
+<a class="articles" href="www.google.com">fuck</a>
 
 
 			<img class="banner-position" src ="<?php echo get_template_directory_uri(); ?>/images/banner.png">
