@@ -60,6 +60,7 @@
 {
     display: none;
     position: absolute;
+    overflow: auto;
 }
 #dddd
 {
@@ -88,6 +89,7 @@
     clear:left;
     width: 100%;
     background-color:#53787a;
+    overflow: auto;
 }
 #hometabrecent
 {
@@ -113,5 +115,46 @@
     clear:right;
     overflow-y:scroll;
     overflow-x:hidden;
+    padding: 10px 10px 10px 10px;
+    
+}
+.comment-body:hover
+{
+    background-color: #FFFFAA;
+}
+#submit
+{
+}
+
+.entry-left
+{
+    width:20%;
+    float:left;
+    margin-left:60px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.entry-right
+{
+    width:70%;
+    float:right;
+    clear: right;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+    border:8px solid;
+    border-color: #bbbbbb;
+    border-radius:25px;
+    padding:10px 0px;
+}
+article
+{
+    overflow:auto;
+}
+#footerimage
+{
+    width:960px;
+    height: 65px;
+    background-image:url('images/FooterBanner.png');
+    background-color:#FFCCCC;
     
 }

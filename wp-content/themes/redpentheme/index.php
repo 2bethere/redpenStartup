@@ -17,7 +17,7 @@ wp_enqueue_script('jquery-ui-core');
 wp_enqueue_script('jquery-ui-dialog');
 
 wp_enqueue_style('jquery-style-dialog'); 
-wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.css'); 
+wp_enqueue_style('jquery-style-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.css'); 
 
 get_header(); ?>
 
@@ -66,12 +66,12 @@ get_header(); ?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php
-				get_template_part( 'content', get_post_format() ); ?>
+				get_template_part( 'content-home', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
 			<?php else : ?>
-			    <?php get_template_part( 'content', 'none' ); ?>
+			    <?php get_template_part( 'content-home', 'none' ); ?>
 			<?php endif; ?>
 
 
@@ -81,23 +81,15 @@ get_header(); ?>
 		<script>
 		<?php if ( !is_user_logged_in() ) : ?>
 		    $( "#homeeditform" ).submit(function( event ) {
-			  event.preventDefault();
 			  $( "#dialog-confirm" ).dialog({
 			      resizable: false,
 			      dragable:false,
-			      modal: true,
-			      buttons: {
-				  "Delete all items": function() {
-				      $( this ).dialog( "close" );
-				      },
-				      Cancel: function() {
-					  $( this ).dialog( "close" );
-					  }
-					}
+			      modal: false
 			    });
-			    $(".ui-dialog-titlebar").hide();
-
-				alert(    $( "#dialog-confirm" ).dialog("option","height"));
+			    //$(".ui-dialog-titlebar").hide();
+			    //alert(    $( "#dialog-confirm" ).dialog("option","height"));
+			  event.preventDefault();
+			    
 			  });
 
 		<?php endif; ?>
@@ -105,9 +97,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 <div id="dialog-confirm">
-<div id="dddd">
-  <p>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
-  </div>
+You need to login to do that
 </div>
 
 <?php get_sidebar(); ?>

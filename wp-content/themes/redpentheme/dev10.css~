@@ -14,7 +14,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url("dev01.css");
-@import url("dev10.css");
 
 /**
  * Table of Contents:
@@ -135,11 +134,6 @@ a:hover {
 a:hover {
 	text-decoration: underline;
 }
-
-article.comment-body.hover 
-{ 
-    background-color:Silver; 
-}   
 
 h1,
 h2,
@@ -774,7 +768,7 @@ img.wp-smiley,
 	border-left: 1px solid #f2f2f2;
 	border-right: 1px solid #f2f2f2;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1600px;
 	width: 100%;
 }
 
@@ -808,6 +802,7 @@ img.wp-smiley,
 
 .site-header {
 	position: relative;
+	background-color: #d35b46;
 }
 
 .site-header .home-link {
@@ -837,6 +832,8 @@ img.wp-smiley,
 	font: 300 italic 24px "Source Sans Pro", Helvetica, sans-serif;
 	margin: 0;
 }
+
+
 
 
 /**
@@ -930,7 +927,7 @@ ul.nav-menu li:hover > ul,
 .navbar {
 	background-color: #f7f5e7;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1600px;
 	width: 100%;
 }
 
@@ -965,6 +962,24 @@ ul.nav-menu li:hover > ul,
 	width: 230px;
 }
 
+.red-pen{
+	margin-left:50px;
+}
+
+.banner-position {
+	position:absolute;
+	right:0px;
+}
+
+.articles{
+	position:absolute;
+	display:inline-block;
+	right:596px;
+	width: 140px;
+	height: 100px;
+}
+
+
 
 /**
  * 5.0 Content
@@ -982,8 +997,6 @@ ul.nav-menu li:hover > ul,
 	margin: 0 auto;
 	max-width: 604px;
 	width: 100%;
-	background-color: #FFFFFF;
-	padding: 4px 10px 4px 10px;
 }
 
 .sidebar .entry-header,
@@ -1010,7 +1023,7 @@ ul.nav-menu li:hover > ul,
 }
 
 .entry-header {
-	/*margin-bottom: 30px;*/
+	margin-bottom: 30px;
 }
 
 .entry-title {
@@ -2138,7 +2151,7 @@ footer.entry-meta {
 }
 
 .comment-body {
-	padding: 12px 0;
+	padding: 24px 0;
 	position: relative;
 }
 
@@ -2241,7 +2254,7 @@ footer.entry-meta {
 /* Comment form */
 .comment-respond {
 	background-color: #f7f5e7;
-	padding: 10px 10px;
+	padding: 30px 0;
 }
 
 .comment .comment-respond {
