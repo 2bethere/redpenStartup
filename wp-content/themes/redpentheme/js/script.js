@@ -1,4 +1,4 @@
-var colorIndex =  0;
+var colorIndex;
 
 var colorValues = [ 
     "FF0000", "00FF00", "0000FF", "FFFF00", "FF00FF", "00FFFF", 
@@ -13,7 +13,6 @@ var colorValues = [
 
 if (!window.GrabText) {
     GrabText = {};
-    colorIndex = 0;;
 }
 
 GrabText.Selector = {};
@@ -58,7 +57,6 @@ GrabText.Selector.mouseup = function () {
         span.style.whiteSpace = "pre";
         span.style.backgroundColor = "#" + colorValues[colorIndex];
         span.style.color = "black";
-        colorIndex++;
 
         var range = selection.getRangeAt(0);
         range.deleteContents();
@@ -79,6 +77,8 @@ function replaceAt(s, n, t) {
 }
 
 $(document).ready(function () {
+    colorIndex = Math.floor(Math.random() * 20);
+
     $(document).bind("mouseup", GrabText.Selector.mouseup);
 /*
     $("article.comment-body").mouseover(function () {
@@ -90,6 +90,8 @@ $(document).ready(function () {
     });
 */
     $("article.comment-body").click(function () {
+        $("article.comment-body").removeClass('hover');
+        $(this).addClass('hover');
         var color = $(this).find("[id^=color]")[0].title;
         var start = parseInt($(this).find("[id^=start]")[0].title, 10);
         var end = parseInt($(this).find("[id^=end]")[0].title, 10);

@@ -22,7 +22,9 @@ get_header(); ?>
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
 
 					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
+          <script id='404kids-script' src="https://s3.amazonaws.com/404kids/src/embed.js" type="text/javascript"></script>
+
+        </div><!-- .page-content -->
 			</div><!-- .page-wrapper -->
 
 		</div><!-- #content -->
